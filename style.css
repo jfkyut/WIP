@@ -11,7 +11,7 @@
 }
 
 :root {
-  --primary-color: rgb(63, 184, 211);
+  --primary-color: rgb(95, 209, 234);
   --secondary-color: rgb(110, 226, 164); 
   --dark-color: #333;
   --light-dark-color: #444;
@@ -41,6 +41,8 @@ body {
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 2;
+  box-shadow: 0 1px 5px var(--darker-color);
 }
 
 a {
@@ -94,6 +96,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  backdrop-filter: blur(15px);
 }
 
 .profile-pic {
@@ -105,16 +108,18 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 12px;
   padding: 50px;
   height: max-content;
+  backdrop-filter: blur(5px);
+  margin-right: 100px;
 }
 
 .name {
   color: var(--light-color);
   font-size: 60px;
-  color: var(--primary-color);
+  color: var(--light-color);
 }
 
 section {

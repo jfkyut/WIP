@@ -94,6 +94,7 @@ a {
   color: var(--secondary-color);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .profile-pic {
@@ -105,6 +106,11 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: var(--darker-color);
+  padding: 50px;
+  box-shadow: 0 0 10px var(--primary-color);
+  border-radius: 5px;
+  height: max-content;
 }
 
 .name {

@@ -88,7 +88,7 @@ a {
 
 .profile-container {
   margin-top: 100px;
-  background-color: var(--dark-color);
+  background: url('Night-Sky-with-stars-123RF.jpg') center / cover;
   padding: 140px 80px 50px 80px;
   font-size: 30px;
   color: var(--secondary-color);
@@ -106,10 +106,9 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--darker-color);
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
   padding: 50px;
-  box-shadow: 0 0 10px var(--primary-color);
-  border-radius: 5px;
   height: max-content;
 }
 

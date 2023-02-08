@@ -32,7 +32,7 @@ body {
 }
 
 .header {
-  background-color: var(--dark-color);
+  background-color: var(--light-dark-color);
   color: var(--light-color);
   display: flex;
   justify-content: space-between;
@@ -62,7 +62,7 @@ a {
   color: var(--primary-color);
   transition: .2s;
   cursor: pointer;
-  border-bottom: 2px solid var(--dark-color);
+  border-bottom: 2px solid var(--light-dark-color);
   height: 50px;
   width: 100px;
   display: flex;

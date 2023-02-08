@@ -88,7 +88,7 @@ a {
 
 .profile-container {
   margin-top: 100px;
-  background: url('Night-Sky-with-stars-123RF.jpg') center / cover;
+  background: url('Night-Sky-with-stars-123RF.jpg') top / cover;
   padding: 140px 80px 50px 80px;
   font-size: 30px;
   color: var(--secondary-color);

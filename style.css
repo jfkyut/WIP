@@ -1,22 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+  --dark-color: #111;
+  --light-color: #eee;
+  --primary-color: rgb(216, 218, 74);
+  --secondary-color: rgb(33, 53, 61);
+}
 
 @font-face {
   font-family: logo;
-  src: url('LEMONMILK-Regular.otf');
+  src: url(/fonts/LEMONMILK-Regular.otf);
+}
+
+@font-face {
+  font-family: cavier;
+  src: url('/fonts/CaviarDreams.ttf');
 }
 
 @font-face {
   font-family: default-font;
-  src: url('NexaText-Trial-Regular.woff');
-}
-
-:root {
-  --primary-color: rgb(95, 209, 234);
-  --secondary-color: rgb(110, 226, 164); 
-  --dark-color: #333;
-  --light-dark-color: #444;
-  --darker-color: #222;
-  --light-color: #ddd;
+  src: url(/fonts/NexaText-Trial-Black.ttf);
 }
 
 * {
@@ -27,22 +29,15 @@
 }
 
 body {
-  background-color: var(--darker-color);
-  height: auto;
+  width: 100%;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  height: 1000px;
 }
 
-.header {
-  background-color: var(--light-dark-color);
-  color: var(--light-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 50px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  box-shadow: 0 1px 5px var(--darker-color);
+header {
+  background: url('img/starry_night_by_izersy-d735rj7.jpg') center / cover;
+  height: 100vh;
 }
 
 a {
@@ -50,122 +45,83 @@ a {
   color: inherit;
 }
 
-.logo {
-  font-family: logo;
-  font-size: 24px;
-  color: var(--primary-color);
-  padding: 10px;
-  cursor: pointer;
-}
-
-.nav-loc {
-  float: left;
-  margin: 0 20px;
-  color: var(--primary-color);
-  transition: .2s;
-  cursor: pointer;
-  border-bottom: 2px solid var(--light-dark-color);
-  height: 50px;
-  width: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav-loc:hover{
-  color: var(--secondary-color);
-  border-bottom: var(--secondary-color) 2px solid;
-}
-
-.nav-loc:active {
-  color: var(--secondary-color);
-  border-bottom: var(--secondary-color) 2px solid;
-}
-
-.active {
-  color: var(--secondary-color);
-  border-bottom: var(--secondary-color) 2px solid;
-}
-
-.profile-container {
-  margin-top: 100px;
-  background: url('Night-Sky-with-stars-123RF.jpg') top / cover;
-  padding: 140px 80px 50px 80px;
-  font-size: 30px;
-  color: var(--secondary-color);
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 10%;
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 
-.profile-pic {
-  border-radius: 500px;
-  width: 400px;
+.logo, .jf {
+  font-family: logo;
+  font-size: 50px;
+  font-weight: 900;
+  cursor: pointer;
+  color: var(--primary-color);
 }
 
-.description {
+.jf {
+  color: var(--light-color);
+}
+
+.navs {
+  float: left;
+  margin: 30px;
+  transition: .2s;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+}
+
+.navs::after {
+  content: '';
+  width: 0%;
+  height: 3px;                            /*  the underline of navs */
+  background: var(--primary-color);
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  transition: .3s;
+}
+
+.navs:hover {
+  color: var(--primary-color);
+}
+
+.navs:hover::after {
+  width: 100%;
+}
+
+.profile-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 12px;
-  padding: 50px;
-  height: max-content;
-  backdrop-filter: blur(5px);
-  margin-right: 100px;
+  justify-content: space-between;
+  margin: 0 10%;
+  align-items: center;
+  height: 100%;
+}
+
+.description-container {
+  color: var(--primary-color);
+  font-size: 24px;
+  text-align: justify;
+  font-family: cavier;
+  width: 59%;
+  background-color: rgba(0, 0, 0, .7);
+  padding: 40px 50px;
+  border-radius: 5px;
 }
 
 .name {
+  font-size: 40px;
+  font-weight: 900;
   color: var(--light-color);
-  font-size: 60px;
-  color: var(--light-color);
-}
-
-section {
-  width: 100%;
-  height: 100px;
-  background-color: var(--dark-color);
-  color: var(--primary-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 100px 0;
-  border-bottom: 2px solid var(--primary-color);
-}
-
-.section-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-}
-
-.section-content {
-  height: auto;
-  color: var(--light-color);
-  background-color: var(--dark-color);
-  padding-top: 100px;
-  width: 60%;
-  text-align: center;
-  padding: 50px;
-  border-radius: 10px;
-}
-
-.text-header {
-  margin-bottom: 50px;
-  color: var(--primary-color);
-}
-
-p {
-  text-align: justify;
-  line-height: 32px;
   margin: 10px 0;
 }
 
-.text-container {
-  background-color: var(--light-dark-color);
-  padding: 40px   50px;
-  color: var(--secondary-color);
-  border-left: 2px solid var(--primary-color);
-  border-right: 2px solid var(--primary-color);
+.pic {
+  border-radius: 100%;
+  width: 30%;
 }

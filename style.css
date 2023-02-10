@@ -112,6 +112,12 @@ a {
   background-color: rgba(0, 0, 0, .7);
   padding: 40px 50px;
   border-radius: 10px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.description-container:hover {
+  transform: scale(1.05);
 }
 
 .name {
@@ -124,4 +130,10 @@ a {
 .pic {
   border-radius: 100%;
   width: 30%;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.pic:hover {
+  transform: scale(1.05);
 }

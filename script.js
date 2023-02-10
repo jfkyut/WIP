@@ -9,6 +9,7 @@ const hobbies = document.querySelector('.hobbies');
 const skills = document.querySelector('.skills');
 
 // events
+
 autobioNav.addEventListener('click', () => {
   autobioNav.classList = 'about-nav active';
   hobbiesNav.classList = 'about-nav';
@@ -38,3 +39,4 @@ skillsNav.addEventListener('click', ()=> {
   hobbies.style.display = 'none';
   skills.style.display = 'block';
 });
+

@@ -246,8 +246,15 @@ ul {
   background-color: var(--dark-lighter-color);
   margin: 20px 40px;
   padding: 20px;
-  border-radius: 10px;
   text-align: center;
+  transition: .4s;
+  cursor: pointer;
+  border: 2px solid var(--dark-lighter-color);
+}
+
+.hobbies-list:hover {
+  border-color: var(--primary-color);
+  transform: scale(1.1);
 }
 
 ::-webkit-scrollbar {

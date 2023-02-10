@@ -75,7 +75,6 @@ nav {
   padding: 20px;
   margin: 0 10px;
   transition: .2s;
-  font-weight: 700;
   font-size: 20px;
   text-align: center;
   position: relative;
@@ -240,17 +239,16 @@ ul {
 }
 
 .hobbies {
-  display: grid;
   height: 70%;
-  grid-template-columns: 50% 50%;
   display: none;
+  grid-template-columns: auto auto auto;
   overflow-y: scroll;
 }
 
 .hobbies-list {
   background-color: var(--dark-lighter-color);
-  margin: 20px 40px;
   padding: 20px;
+  margin: 20px 10%;
   text-align: center;
   transition: .4s;
   border-radius: 5px;
@@ -263,9 +261,10 @@ ul {
   transform: scale(1.1);
 }
 
+/* scroll bar */
 ::-webkit-scrollbar {
-  width: 8px;
-  background-color: var(--dark-color);
+  width: 5px;
+  background-color: black;
 }
 
 ::-webkit-scrollbar-thumb {

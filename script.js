@@ -1,3 +1,16 @@
+// header nav
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    let target = a.getAttribute("href");
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let targetTop = document.querySelector(target).getBoundingClientRect().top + scrollTop;
+    window.scrollTo({
+      top: targetTop,
+      behavior: "smooth"
+    });
+  });
+});
 
 // ---------------------------------about------------------------------
 const autobioNav = document.querySelector('#autobiography');

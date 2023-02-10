@@ -1,10 +1,14 @@
-
 :root {
   --dark-color: #111;
+  --dark-medium-color: #333;
+  --dark-lighter-color: #444;
   --light-color: #eee;
   --primary-color: rgb(216, 218, 74);
-  --secondary-color: rgb(33, 53, 61);
+  --secondary-color: rgb(129, 127, 51);
+  --default-font: 'Lato', sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 @font-face {
   font-family: logo;
@@ -16,43 +20,36 @@
   src: url('fonts/CaviarDreams.ttf');
 }
 
-@font-face {
-  font-family: default-font;
-  src: url('fonts/NexaText-Trial-Black.ttf');
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: default-font;
+  font-family: var(--default-font);
 }
 
 body {
   width: 100%;
   background-color: var(--dark-color);
   color: var(--light-color);
-  height: 1000px;
+  height: auto;
 }
 
+/* header------------------------------------------------- */
 header {
   background: url('img/starry_night_by_izersy-d735rj7.jpg') center / cover;
-  height: 100vh;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
+  height: 120vh;
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 10%;
+  padding: 0 10%;
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 1;
+  background-color: var(--dark-color);
+  border-bottom: 1px solid rgb(76, 76, 76);
 }
 
 .logo, .jf {
@@ -67,11 +64,19 @@ a {
   color: var(--light-color);
 }
 
+nav {
+  display: flex;
+  align-items: center;
+}
+
 .navs {
-  float: left;
-  margin: 30px;
+  text-decoration: none;
+  color: inherit;
+  padding: 20px;
+  margin: 0 10px;
   transition: .2s;
   font-weight: 700;
+  font-size: 20px;
   text-align: center;
   position: relative;
 }
@@ -79,10 +84,10 @@ a {
 .navs::after {
   content: '';
   width: 0%;
-  height: 3px;                            /*  the underline of navs */
+  height: 3px;                           
   background: var(--primary-color);
   position: absolute;
-  bottom: -7px;
+  bottom: -3px;
   left: 0;
   transition: .3s;
 }
@@ -95,6 +100,10 @@ a {
   width: 100%;
 }
 
+.navs:active {
+  opacity: .7;
+}
+
 .profile-container {
   display: flex;
   justify-content: space-between;
@@ -104,27 +113,24 @@ a {
 }
 
 .description-container {
-  color: var(--primary-color);
-  font-size: 24px;
-  text-align: justify;
-  font-family: cavier;
+  line-height: 80PX;
+  font-size: 50px;
+  font-weight: bold;
   width: 59%;
   background-color: rgba(0, 0, 0, .7);
   padding: 40px 50px;
   border-radius: 10px;
   cursor: pointer;
   transition: .5s;
+  backdrop-filter: blur(5px);
+}
+
+.description-container span {
+  color: var(--primary-color);
 }
 
 .description-container:hover {
   transform: scale(1.05);
-}
-
-.name {
-  font-size: 40px;
-  font-weight: 900;
-  color: var(--light-color);
-  margin: 10px 0;
 }
 
 .pic {
@@ -136,4 +142,125 @@ a {
 
 .pic:hover {
   transform: scale(1.05);
+}
+
+/* about------------------------------------------------------- */
+
+section {
+  margin: 100px 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  align-items: center;
+}
+
+.about-container .pic {
+  margin-left: 5%;
+}
+
+.about-card {
+  width: 60%;
+  height: 80%;
+  background-color: var(--dark-medium-color);
+  border-radius: 10px;
+}
+
+.section-header {
+  font-size: 40px;
+  padding: 20px;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--dark-lighter-color);
+  padding: 15px;
+}
+
+.about-nav, .active {
+  font-weight: bold;
+  margin: 0 40px;
+  list-style-type: none;
+  float: left;
+  position: relative;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.active {
+  color: var(--primary-color);
+}
+
+.about-nav::after {
+  content: '';
+  height: 3px;
+  background: var(--primary-color);
+  width: 0;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  transition: .3s;
+}
+
+.about-nav:hover {
+  color: var(--primary-color);
+}
+
+.about-nav:hover::after {
+  width: 100%;
+}
+
+.about-nav:active {
+  opacity: .7;
+}
+
+.autobiography {
+  background-color: var(--dark-lighter-color);
+  padding: 20px;
+  margin: 20px 40px;
+  line-height: 30px;
+  height: 70%;
+  overflow-y: scroll;
+  border-radius: 10px;
+  text-align: justify;
+}
+
+.hobbies {
+  display: grid;
+  height: 70%;
+  grid-template-columns: 50% 50%;
+  display: none;
+  overflow-y: scroll;
+}
+
+.hobbies-list {
+  background-color: var(--dark-lighter-color);
+  margin: 20px 40px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--dark-color);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  transition: .5s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-color);
 }

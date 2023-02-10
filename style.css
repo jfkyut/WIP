@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: logo;
-  src: url(fonts/LEMONMILK-Regular.otf);
+  src: url('fonts/LEMONMILK-Regular.otf');
 }
 
 @font-face {
@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: default-font;
-  src: url(fonts/NexaText-Trial-Black.ttf);
+  src: url('fonts/NexaText-Trial-Black.ttf');
 }
 
 * {

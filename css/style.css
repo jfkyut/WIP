@@ -12,12 +12,12 @@
 
 @font-face {
   font-family: logo;
-  src: url('fonts/LEMONMILK-Regular.otf');
+  src: url('../fonts/LEMONMILK-Regular.otf');
 }
 
 @font-face {
   font-family: cavier;
-  src: url('fonts/CaviarDreams.ttf');
+  src: url('../fonts/CaviarDreams.ttf');
 }
 
 * {
@@ -36,7 +36,7 @@ body {
 
 /* header------------------------------------------------- */
 header {
-  background: url('img/starry_night_by_izersy-d735rj7.jpg') center / cover;
+  background: url('../img/starry_night_by_izersy-d735rj7.jpg') center / cover;
   height: 120vh;
 }
 
@@ -47,14 +47,14 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   background-color: var(--dark-color);
   border-bottom: 1px solid rgb(76, 76, 76);
 }
 
 .logo, .jf {
   font-family: logo;
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 900;
   cursor: pointer;
   color: var(--primary-color);
@@ -222,8 +222,10 @@ ul {
   opacity: .7;
 }
 
+                            /* autobiography */
 .autobiography {
   background-color: var(--dark-lighter-color);
+  font-family: cavier;
   padding: 20px;
   margin: 20px 40px;
   line-height: 30px;
@@ -238,10 +240,10 @@ ul {
   background-color: var(--primary-color);
 }
 
+                            /* hobbies */
 .hobbies {
   height: 70%;
   display: none;
-  grid-template-columns: auto auto auto;
   overflow-y: scroll;
 }
 
@@ -253,7 +255,7 @@ ul {
   transition: .4s;
   border-radius: 5px;
   cursor: pointer;
-  border: 2px solid var(--dark-lighter-color);
+  border: 1px solid var(--dark-lighter-color);
 }
 
 .hobbies-list:hover {
@@ -261,7 +263,135 @@ ul {
   transform: scale(1.1);
 }
 
-/* scroll bar */
+                            /* skills */
+.skills {
+  display: none;
+  grid-template-columns: auto auto auto;
+  height: 70%;
+  padding: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.skill-card {
+  background-color: var(--dark-color);
+  height: 150px;
+  width: 150px;
+  margin: 50px;
+  border-radius: 80px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+.skill-card .percent {
+  position: relative;
+  height: 300px;
+  width: 300px;
+}
+
+.skill-card .percent svg {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  transform: rotate(270deg);
+}
+
+.skill-card .percent svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 3;
+  stroke: black;
+  transform: translate(17%, 17%);
+}
+
+.skill-card .percent svg circle:nth-child(2) {
+  stroke: var(--color);
+  stroke-dasharray: 629;
+  stroke-dashoffset: calc(629 - (629 * var(--value)) / 100);
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.dot {
+  position: absolute;
+  inset: 5px;
+  z-index: 1;
+  animation: movingDot 1s linear forwards;
+}
+
+@keyframes movingDot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(3.6deg * var(--value)));
+  }
+}
+
+.dot::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: var(--color);
+  box-shadow: 0 0 10px var(--color), 0 0 30px var(--color);
+}
+
+.number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 1.5s;
+}
+
+.number h1 {
+  font-size: 50px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.number p {
+  color: rgba(255, 255, 255, .5);
+  font-weight: lighter;
+}
+
+.number h1 span {
+  font-size: 25px;
+  font-weight: 100;
+}
+/* html */
+.html-color {
+  background-color: var(--html-color);
+}
+
+/* ---------------------------------------------scroll bar */
 ::-webkit-scrollbar {
   width: 5px;
   background-color: black;

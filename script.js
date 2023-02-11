@@ -26,7 +26,7 @@ let activeSection = autobiography;
 // toggle function
 const toggleActive = (newActiveSection) => {
   activeSection.style.display = 'none';
-  newActiveSection.style.display = 'block';
+  newActiveSection.style.display = 'grid';
   activeSection = newActiveSection;
 };
 

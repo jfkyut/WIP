@@ -147,7 +147,7 @@ nav {
 
 section {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   display: flex;
   justify-content: center;
 }
@@ -227,7 +227,7 @@ ul {
   background-color: var(--dark-lighter-color);
   font-family: cavier;
   padding: 20px;
-  margin: 20px 40px;
+  margin: 40px;
   line-height: 30px;
   height: 70%;
   overflow-y: scroll;
@@ -242,7 +242,7 @@ ul {
 
                             /* hobbies */
 .hobbies {
-  height: 70%;
+  height: 75%;
   display: none;
   overflow-y: scroll;
 }
@@ -265,18 +265,17 @@ ul {
 
                             /* skills */
 .skills {
+  margin-top: 10px;
   display: none;
   grid-template-columns: auto auto auto;
   height: 70%;
   padding: 20px;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 .skill-card {
   background-color: var(--dark-color);
-  height: 210px;
-  width: 210px;
+  height: 220px;
+  width: 220px;
   margin: 20px;
   border-radius: 100%;
   position: relative;
@@ -289,6 +288,7 @@ ul {
 
 .skill-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 10px var(--light-color);
 }
 
 .skill-card .percent {
@@ -308,7 +308,7 @@ ul {
   width: 100%;
   height: 100%;
   fill: transparent;
-  stroke-width: 3;
+  stroke-width: 5;
   stroke: var(--dark-medium-color);
   transform: translate(17%, 17%);
 }
@@ -336,6 +336,7 @@ ul {
   inset: 5px;
   z-index: 1;
   animation: movingDot 1s linear forwards;
+  pointer-events: none;
 }
 
 @keyframes movingDot {
@@ -350,10 +351,10 @@ ul {
 .dot::before {
   content: '';
   position: absolute;
-  top: 40px;
-  left: 50%;
-  width: 10px;
-  height: 10px;
+  top: 14%;
+  left: 49%;
+  width: 12px;
+  height: 12px;
   border-radius: 100%;
   background-color: var(--color);
   box-shadow: 0 0 10px var(--color), 0 0 30px var(--color);
@@ -406,3 +407,5 @@ ul {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--primary-color);
 }
+
+@import url('mobile.css');

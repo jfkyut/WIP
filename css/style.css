@@ -275,10 +275,10 @@ ul {
 
 .skill-card {
   background-color: var(--dark-color);
-  height: 150px;
-  width: 150px;
-  margin: 50px;
-  border-radius: 80px;
+  height: 210px;
+  width: 210px;
+  margin: 20px;
+  border-radius: 100%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -309,7 +309,7 @@ ul {
   height: 100%;
   fill: transparent;
   stroke-width: 3;
-  stroke: black;
+  stroke: var(--dark-medium-color);
   transform: translate(17%, 17%);
 }
 

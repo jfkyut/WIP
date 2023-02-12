@@ -86,7 +86,7 @@ nav {
   height: 3px;                           
   background: var(--primary-color);
   position: absolute;
-  bottom: -3px;
+  bottom: 0;
   left: 0;
   transition: .3s;
 }
@@ -226,14 +226,14 @@ ul {
 .autobiography {
   background-color: var(--dark-lighter-color);
   font-family: cavier;
-  padding: 20px;
-  margin: 40px;
-  line-height: 30px;
+  line-height: 40px;
   height: 70%;
+  width: 80%;
+  padding: 50px;
   overflow-y: scroll;
   border-radius: 10px;
   text-align: justify;
-  cursor: pointer;
+  margin: 40px 80px;
 }
 
 .autobiography:hover::-webkit-scrollbar-thumb {
@@ -244,14 +244,18 @@ ul {
 .hobbies {
   height: 75%;
   display: none;
-  overflow-y: scroll;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px;
+  margin-top: 25px;
 }
 
 .hobbies-list {
   background-color: var(--dark-lighter-color);
   padding: 20px;
-  margin: 20px 10%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 5%;
   transition: .4s;
   border-radius: 5px;
   cursor: pointer;

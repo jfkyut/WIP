@@ -225,8 +225,8 @@ ul {
                             /* autobiography */
 .autobiography {
   background-color: var(--dark-lighter-color);
-  font-family: cavier;
   line-height: 40px;
+  font-family: cavier;
   height: 70%;
   width: 80%;
   padding: 50px;

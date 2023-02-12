@@ -224,7 +224,7 @@ ul {
 
                             /* autobiography */
 .autobiography {
-  background-color: var(--dark-lighter-color);
+  background-color: var(--dark-color);
   line-height: 40px;
   font-family: cavier;
   height: 70%;
@@ -234,6 +234,7 @@ ul {
   border-radius: 10px;
   text-align: justify;
   margin: 40px 80px;
+  box-shadow: inset 0 5px 10px black, inset -5px -5px 10px black;
 }
 
 .autobiography:hover::-webkit-scrollbar-thumb {

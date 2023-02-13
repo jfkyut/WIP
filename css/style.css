@@ -1,5 +1,6 @@
 @import url('./about.css');
 @import url('./scrollbar.css');
+@import url('./services.css');
 
 :root {
   --dark-color: #111;
@@ -124,6 +125,7 @@ nav {
   border-radius: 10px;
   cursor: pointer;
   transition: .5s;
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
 

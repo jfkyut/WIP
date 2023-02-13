@@ -34,104 +34,82 @@ In conclusion, I want to encourage others to explore their own experiences and n
 
 </div>`;
 
-const hobbies = `<div class="hobbies">
-<div class="hobbies-list">Playing Online Games</div>
-<div class="hobbies-list">Watching Movies</div>
-<div class="hobbies-list">Watching Animes</div>
-<div class="hobbies-list">Watching NBA</div>
-<div class="hobbies-list">Reading Manga</div>
-<div class="hobbies-list">Solving Rubik's Cube</div>
-<div class="hobbies-list">Coding Simple Projects</div>
-<div class="hobbies-list">Drawing</div>
-</div>`;
+const hobbiesData = [
+  'Playing Online Games',
+  'Watching Movies',
+  'Watching Animes',
+  'Watching NBA',
+  'Reading Manga',
+  'Solving Rubik\'s Cube',
+  'Coding Simple Projects',
+  'Drawings'
+]
 
-const skills = `<div class="skills">
+// opening hobbies tag
+let hobbies = `<div class="hobbies">`;
+// hobbies children element
+hobbiesData.forEach( hobby => {
+  hobbies += `<div class="hobbies-list">${hobby}</div>`;
+});
+// hobbies closing tag
+hobbies += `</div>`;
 
-<div class="skill-card">
-  <div class="percent" style="--value:75;--color: rgb(255, 111, 0)">
-    <div class="dot"></div>
-    <svg>
-      <circle cx="100" cy="100" r="100"></circle>
-      <circle cx="100" cy="100" r="100"></circle>
-    </svg>
-    <div class="number">
-      <h1 >75 <span>%</span> </h1>
-      <p>HTML</p>
+const skillsData = [
+  { 
+    name: "HTML", 
+    value: 75, 
+    color: "rgb(255, 111, 0)" 
+  },
+  { 
+    name: "CSS", 
+    value: 66, 
+    color: "rgb(0, 145, 255)" 
+  },
+  { 
+    name: "JavaScript", 
+    value: 50, 
+    color: "yellow" 
+  },
+  { 
+    name: "PHP", 
+    value: 54, 
+    color: "rgb(116, 116, 201)" 
+  },
+  { 
+    name: "MYSQL", 
+    value: 59, 
+    color: "rgb(112, 195, 107)" 
+  },
+  { 
+    name: "PHOTOSHOP", 
+    value: 40, 
+    color: "rgb(70, 58, 242)" 
+  },
+];
+
+// ---------------opening tag of skill class------------------------
+let skills = '<div class="skills">';
+
+skillsData.forEach((skill) => {
+  skills += `
+    <div class="skill-card">
+      <div class="percent" style="--value:${skill.value};--color: ${skill.color}">
+        <div class="dot"></div>
+        <svg>
+          <circle cx="100" cy="100" r="100"></circle>
+          <circle cx="100" cy="100" r="100"></circle>
+        </svg>
+        <div class="number">
+          <h1 >${skill.value} <span>%</span> </h1>
+          <p>${skill.name}</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  `;
+});
 
-<div class="skill-card">
-  <div class="percent" style="--value:66;--color: rgb(0, 145, 255)">
-    <div class="dot"></div>
-    <svg>
-      <circle cx="100" cy="100" r="100"></circle>
-      <circle cx="100" cy="100" r="100"></circle>
-    </svg>
-    <div class="number">
-      <h1 >66 <span>%</span> </h1>
-      <p>CSS</p>
-    </div>
-  </div>
-</div>
-
-<div class="skill-card">
-  <div class="percent" style="--value:50;--color: yellow">
-    <div class="dot"></div>
-    <svg>
-      <circle cx="100" cy="100" r="100"></circle>
-      <circle cx="100" cy="100" r="100"></circle>
-    </svg>
-    <div class="number">
-      <h1 >50 <span>%</span> </h1>
-      <p>JavaScript</p>
-    </div>
-  </div>
-</div>
-
-<div class="skill-card">
-  <div class="percent" style="--value:54;--color: rgb(116, 116, 201)">
-    <div class="dot"></div>
-    <svg>
-      <circle cx="100" cy="100" r="100"></circle>
-      <circle cx="100" cy="100" r="100"></circle>
-    </svg>
-    <div class="number">
-      <h1 >54 <span>%</span> </h1>
-      <p>PHP</p>
-    </div>
-  </div>
-</div>
-
-<div class="skill-card">
-  <div class="percent" style="--value:59;--color: rgb(112, 195, 107)">
-    <div class="dot"></div>
-    <svg>
-      <circle cx="100" cy="100" r="100"></circle>
-      <circle cx="100" cy="100" r="100"></circle>
-    </svg>
-    <div class="number">
-      <h1 >59 <span>%</span> </h1>
-      <p>MYSQL</p>
-    </div>
-  </div>
-</div>
-
-<div class="skill-card">
-  <div class="percent" style="--value:40;--color: rgb(70, 58, 242)">
-    <div class="dot"></div>
-    <svg>
-      <circle cx="100" cy="100" r="100"></circle>
-      <circle cx="100" cy="100" r="100"></circle>
-    </svg>
-    <div class="number">
-      <h1>40 <span>%</span> </h1>
-      <p>PHOTOSHOP</p>
-    </div>
-  </div>
-</div>
-
-</div>`;
+// ---------------------closing tag of skill class-----------------
+skills += '</div>';
 
 
 export { autobiography, hobbies, skills };

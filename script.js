@@ -5,7 +5,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', (e) => {
     e.preventDefault();
     let target = a.getAttribute("href");
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollTop = document.documentElement.scrollTop;
     let targetTop = document.querySelector(target).getBoundingClientRect().top + scrollTop;
     window.scrollTo({
       top: targetTop,
@@ -14,7 +14,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// ---------------------------------about------------------------------
+// ---------------------------------about---------------------------
 const autobioNav = document.querySelector('#autobiography');
 const hobbiesNav = document.querySelector('#hobbies');
 const skillsNav = document.querySelector('#skills');

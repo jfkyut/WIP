@@ -14,6 +14,22 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
+const hamburger = document.querySelector('.hamburger');
+const headerNav = document.querySelector('.header-nav');
+let hamburgerStatus = 'inactive';
+
+hamburger.addEventListener('click', () => {
+  if(hamburgerStatus === 'inactive') {
+    hamburger.classList.add('active-ham');
+    headerNav.classList.add('active-header-nav');
+    hamburgerStatus = 'active';
+  } else {
+    hamburger.classList.remove('active-ham');
+    headerNav.classList.remove('active-header-nav');
+    hamburgerStatus = 'inactive';
+  }
+});
+
 //--------------------------------about---------------------------
 const aboutNavs = document.querySelectorAll('.about-nav');
 const aboutContent = document.querySelector('.about-content');

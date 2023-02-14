@@ -48,6 +48,7 @@ header {
 .nav-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 10%;
   width: 100%;
   position: fixed;
@@ -106,6 +107,47 @@ nav {
 
 .navs:active {
   opacity: .7;
+}
+
+.hamburger {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger .bar, 
+.hamburger::after, 
+.hamburger::before {
+  height: 5px;
+  width: 100%;
+  border-radius: 100px;
+  margin: 7px 0;
+  content: '';
+  display: block;
+  background-color: var(--light-color);
+  transition: .4s;
+}
+
+.hamburger:hover .bar, 
+.hamburger:hover::before, 
+.hamburger:hover::after{
+  background-color: var(--primary-color);
+}
+
+.hamburger.active-ham::before {
+  transform: rotate(-45deg) translate(-10px, 6px);
+}
+
+.hamburger.active-ham::after {
+  transform: rotate(45deg) translate(-10px, -6px);
+}
+
+.hamburger.active-ham .bar {
+  opacity: 0;
 }
 
 .profile-container {

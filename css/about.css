@@ -118,6 +118,7 @@ ul {
 
 .hobbies-list:hover {
   border-color: var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
   transform: scale(1.1);
 }
 

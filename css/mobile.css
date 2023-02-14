@@ -13,6 +13,15 @@
     flex-direction: column;
     background-color: var(--dark-color);
     border-bottom: 1px solid var(--dark-medium-color);
+    transition: .4s;
+  }
+
+  .hamburger {
+    display: block !important;
+  }
+
+  .header-nav.active-header-nav {
+    left: 0;
   }
 
   .header-nav .navs {
@@ -20,9 +29,12 @@
     justify-content: center;
   }
 
+  #home .nav-container {
+    padding: 10px 10%;
+  }
+
   .nav-container .logo, .jf {
     font-size: 24px !important; 
-    padding: 10px;
   }
 
   #home .profile-container {

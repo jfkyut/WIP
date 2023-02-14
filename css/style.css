@@ -122,8 +122,8 @@ nav {
 .hamburger .bar, 
 .hamburger::after, 
 .hamburger::before {
-  height: 5px;
-  width: 100%;
+  height: 4px;
+  width: 90%;
   border-radius: 100px;
   margin: 7px 0;
   content: '';
@@ -139,11 +139,11 @@ nav {
 }
 
 .hamburger.active-ham::before {
-  transform: rotate(-45deg) translate(-10px, 6px);
+  transform: rotate(-45deg) translate(-10px, 5px);
 }
 
 .hamburger.active-ham::after {
-  transform: rotate(45deg) translate(-10px, -6px);
+  transform: rotate(45deg) translate(-10px, -5px);
 }
 
 .hamburger.active-ham .bar {

@@ -77,7 +77,7 @@ ul {
 
                             /* autobiography */
 .autobiography {
-  background-color: var(--dark-color);
+  background-color: #222;
   line-height: 40px;
   font-family: cavier;
   height: 70%;

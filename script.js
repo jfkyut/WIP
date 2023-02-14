@@ -14,6 +14,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
+// ------------------header nav toggle
 const hamburger = document.querySelector('.hamburger');
 const headerNav = document.querySelector('.header-nav');
 let hamburgerStatus = 'inactive';

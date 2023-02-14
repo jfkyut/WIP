@@ -15,31 +15,29 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 //--------------------------------about---------------------------
-const autobioNav = document.querySelector('#autobiography');
-const hobbiesNav = document.querySelector('#hobbies');
-const skillsNav = document.querySelector('#skills');
+const aboutNavs = document.querySelectorAll('.about-nav');
 const aboutContent = document.querySelector('.about-content');
 
+// Define the content for each navigation item
+const content = {
+  'autobiography': autobiography,
+  'hobbies': hobbies,
+  'skills': skills
+};
+
+// default content
 aboutContent.innerHTML = autobiography;
 
-// events
-autobioNav.addEventListener('click', () => {
-  autobioNav.classList.add('active');
-  hobbiesNav.classList.remove('active');
-  skillsNav.classList.remove('active');
-  aboutContent.innerHTML = autobiography;
-});
+// Set up the event listeners using forEach()
+aboutNavs.forEach(item => {
+  item.addEventListener('click', () => {
+    // Remove the 'active' class from all navigation items
+    aboutNavs.forEach(nav => nav.classList.remove('active'));
 
-hobbiesNav.addEventListener('click', () => {
-  autobioNav.classList.remove('active');
-  hobbiesNav.classList.add('active');
-  skillsNav.classList.remove('active');
-  aboutContent.innerHTML = hobbies;
-});
+    // Add the 'active' class to the clicked navigation item
+    item.classList.add('active');
 
-skillsNav.addEventListener('click', () => {
-  autobioNav.classList.remove('active');
-  hobbiesNav.classList.remove('active');
-  skillsNav.classList.add('active');
-  aboutContent.innerHTML = skills;
+    // Update the content based on the clicked navigation item
+    aboutContent.innerHTML = content[item.id];
+  });
 });

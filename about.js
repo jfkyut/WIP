@@ -65,7 +65,6 @@ const skillsData = [
 
 // ---------------opening tag of skill 
 let skills = '<div class="skills">';
-
 // ----------------skill card
 skillsData.forEach((skill) => {
   skills += `
@@ -84,7 +83,6 @@ skillsData.forEach((skill) => {
     </div>
   `;
 });
-
 // ---------------------closing tag of skill 
 skills += '</div>';
 

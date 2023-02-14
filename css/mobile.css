@@ -1,0 +1,119 @@
+@media(max-width: 400px) {
+                            /* header */
+  #home {
+    height: 700px;
+    width: 100%;
+  }
+
+  .header-nav {
+    position: absolute;
+    top: 50px;
+    left: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--dark-color);
+    border-bottom: 1px solid var(--dark-medium-color);
+  }
+
+  .header-nav .navs {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-container .logo, .jf {
+    font-size: 24px !important; 
+    padding: 10px;
+  }
+
+  #home .profile-container {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    justify-content: space-evenly;
+  }
+
+  .profile-container .description-container {
+    height: 133px;
+    width: 180px;
+    padding: 20px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  /* -----------------about */
+  .about-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about-container .pic {
+    margin-bottom: 20px;
+  }
+
+  .about-card {
+    width: 90%;
+  }
+
+  .section-header {
+    font-size: 30px;
+  }
+
+  .about-card ul {
+    padding: 0;
+  }
+
+  .about-card ul .about-nav {
+    font-size: 15px;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .about-nav::after {
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .about-card .about-content {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .autobiography {
+    margin: 0;
+    padding: 20px 10px;
+    height: 90%;
+    width: 85%;
+  }
+
+  .hobbies {
+    height: 90%;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .hobbies .hobbies-list {
+    margin: 0;
+    border-radius: 10px;
+    margin: 10px;
+    width: 80%;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: 90%;
+  }
+}

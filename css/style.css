@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 @import url('./about.css');
 @import url('./scrollbar.css');
 @import url('./services.css');
+@import url('./mobile.css');
 
 :root {
   --dark-color: #111;
@@ -11,8 +14,6 @@
   --secondary-color: rgb(129, 127, 51);
   --default-font: 'Lato', sans-serif;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 @font-face {
   font-family: logo;

@@ -28,16 +28,23 @@
   #home .profile-container {
     width: 100%;
     display: flex;
+    flex-direction: column-reverse;
     margin: 0;
-    justify-content: space-evenly;
+    justify-content: center;
+  }
+
+  .profile-container .pic {
+    margin: 20px;
+    width: 50%;
   }
 
   .profile-container .description-container {
-    height: 133px;
-    width: 180px;
+    height: 200px;
+    width: 80%;
+    text-align: center;
     padding: 20px;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 30px;
+    line-height: 40px;
   }
 
   /* -----------------about */

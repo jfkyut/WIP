@@ -14,7 +14,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// ---------------------------------about---------------------------
+//--------------------------------about---------------------------
 const autobioNav = document.querySelector('#autobiography');
 const hobbiesNav = document.querySelector('#hobbies');
 const skillsNav = document.querySelector('#skills');

@@ -55,41 +55,18 @@ hobbiesData.forEach( hobby => {
 hobbies += `</div>`;
 
 const skillsData = [
-  { 
-    name: "HTML", 
-    value: 75, 
-    color: "rgb(255, 111, 0)" 
-  },
-  { 
-    name: "CSS", 
-    value: 66, 
-    color: "rgb(0, 145, 255)" 
-  },
-  { 
-    name: "JavaScript", 
-    value: 50, 
-    color: "yellow" 
-  },
-  { 
-    name: "PHP", 
-    value: 54, 
-    color: "rgb(116, 116, 201)" 
-  },
-  { 
-    name: "MYSQL", 
-    value: 59, 
-    color: "rgb(112, 195, 107)" 
-  },
-  { 
-    name: "PHOTOSHOP", 
-    value: 40, 
-    color: "rgb(70, 58, 242)" 
-  },
+  { name: "HTML", value: 75, color: "rgb(255, 111, 0)" },
+  { name: "CSS", value: 66, color: "rgb(0, 145, 255)" },
+  { name: "JavaScript", value: 50, color: "yellow" },
+  { name: "PHP", value: 54, color: "rgb(116, 116, 201)" },
+  { name: "MYSQL", value: 59, color: "rgb(112, 195, 107)" },
+  { name: "PHOTOSHOP", value: 40, color: "rgb(70, 58, 242)" },
 ];
 
-// ---------------opening tag of skill class------------------------
+// ---------------opening tag of skill 
 let skills = '<div class="skills">';
 
+// ----------------skill card
 skillsData.forEach((skill) => {
   skills += `
     <div class="skill-card">
@@ -108,8 +85,7 @@ skillsData.forEach((skill) => {
   `;
 });
 
-// ---------------------closing tag of skill class-----------------
+// ---------------------closing tag of skill 
 skills += '</div>';
-
 
 export { autobiography, hobbies, skills };

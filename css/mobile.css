@@ -80,6 +80,7 @@
 
   .about-card {
     width: 90%;
+    border-radius: 1px;
   }
 
   .section-header {

@@ -96,22 +96,22 @@ ul {
 
                             /* hobbies */
 .hobbies {
-  height: 75%;
+  height: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
   padding: 50px;
-  margin-top: 25px;
 }
 
 .hobbies-list {
   background-color: var(--dark-lighter-color);
-  padding: 20px;
+  height: 70%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px;
   transition: .4s;
-  border-radius: 100px;
+  border-radius: 10px;
   cursor: pointer;
   border: 1px solid var(--dark-lighter-color);
 }
@@ -127,17 +127,15 @@ ul {
   display: grid;
   grid-template-columns: auto auto auto;
   height: 83%;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 50px;
 }
 
 .skill-card {
   background-color: var(--dark-color);
   height: 220px;
   width: 220px;
-  margin: 0 10px;
   border-radius: 100%;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;

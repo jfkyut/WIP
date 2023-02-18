@@ -35,53 +35,53 @@ In conclusion, I want to encourage others to explore their own experiences and n
 </div>`;
 
 const hobbiesData = [
-  'Playing Online Games',
-  'Watching Movies',
-  'Watching Animes',
-  'Watching NBA',
-  'Reading Manga',
-  'Solving Rubik\'s Cube',
-  'Coding Simple Projects',
-  'Drawings'
+    'Playing Online Games',
+    'Watching Movies',
+    'Watching Animes',
+    'Watching NBA',
+    'Reading Manga',
+    'Solving Rubik\'s Cube',
+    'Coding Simple Projects',
+    'Drawings'
 ]
 
 // opening hobbies tag
 let hobbies = `<div class="hobbies">`;
 // hobbies children element
 hobbiesData.forEach( hobby => {
-  hobbies += `<div class="hobbies-list">${hobby}</div>`;
+    hobbies += `<div class="hobbies-list">${hobby}</div>`;
 });
 // hobbies closing tag
 hobbies += `</div>`;
 
 const skillsData = [
-  { name: "HTML", value: 75, color: "rgb(255, 111, 0)" },
-  { name: "CSS", value: 66, color: "rgb(0, 145, 255)" },
-  { name: "JavaScript", value: 50, color: "yellow" },
-  { name: "PHP", value: 54, color: "rgb(116, 116, 201)" },
-  { name: "MYSQL", value: 59, color: "rgb(112, 195, 107)" },
-  { name: "PHOTOSHOP", value: 40, color: "rgb(70, 58, 242)" },
+    { name: "HTML", value: 75, color: "rgb(255, 111, 0)" },
+    { name: "CSS", value: 66, color: "rgb(0, 145, 255)" },
+    { name: "JavaScript", value: 50, color: "yellow" },
+    { name: "PHP", value: 54, color: "rgb(116, 116, 201)" },
+    { name: "MYSQL", value: 59, color: "rgb(112, 195, 107)" },
+    { name: "PHOTOSHOP", value: 40, color: "rgb(70, 58, 242)" },
 ];
 
 // ---------------opening tag of skill 
 let skills = '<div class="skills">';
 // ----------------skill card
 skillsData.forEach((skill) => {
-  skills += `
+skills += `
     <div class="skill-card">
-      <div class="percent" style="--value:${skill.value};--color: ${skill.color}">
+    <div class="percent" style="--value:${skill.value};--color: ${skill.color}">
         <div class="dot"></div>
         <svg>
-          <circle cx="100" cy="100" r="100"></circle>
-          <circle cx="100" cy="100" r="100"></circle>
+        <circle cx="100" cy="100" r="100"></circle>
+        <circle cx="100" cy="100" r="100"></circle>
         </svg>
         <div class="number">
-          <h1 >${skill.value} <span>%</span> </h1>
-          <p>${skill.name}</p>
+        <h1 >${skill.value} <span>%</span> </h1>
+        <p>${skill.name}</p>
         </div>
-      </div>
     </div>
-  `;
+    </div>
+`;
 });
 // ---------------------closing tag of skill 
 skills += '</div>';

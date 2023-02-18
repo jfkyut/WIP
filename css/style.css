@@ -2,198 +2,197 @@
 
 @import url('./about.css');
 @import url('./scrollbar.css');
-@import url('./services.css');
 @import url('./mobile.css');
 
 :root {
-  --dark-color: #111;
-  --dark-medium-color: #333;
-  --dark-lighter-color: #444;
-  --light-color: #eee;
-  --primary-color: rgb(216, 218, 74);
-  --secondary-color: rgb(129, 127, 51);
-  --default-font: 'Lato', sans-serif;
+    --dark-color: #111;
+    --dark-medium-color: #333;
+    --dark-lighter-color: #444;
+    --light-color: #eee;
+    --primary-color: rgb(216, 218, 74);
+    --secondary-color: rgb(129, 127, 51);
+    --default-font: 'Lato', sans-serif;
 }
 
 @font-face {
-  font-family: logo;
-  src: url('../fonts/LEMONMILK-Regular.otf');
+    font-family: logo;
+    src: url('../fonts/LEMONMILK-Regular.otf');
 }
 
 @font-face {
-  font-family: cavier;
-  src: url('../fonts/CaviarDreams.ttf');
+    font-family: cavier;
+    src: url('../fonts/CaviarDreams.ttf');
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: var(--default-font);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--default-font);
 }
 
 body {
-  width: 100%;
-  background-color: var(--dark-color);
-  color: var(--light-color);
-  height: auto;
+    width: 100%;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    height: auto;
 }
 
 /* header------------------------------------------------- */
 header {
-  background: url('../img/starry_night_by_izersy-d735rj7.jpg') center / cover;
-  height: 120vh;
+    background: url('../img/starry_night_by_izersy-d735rj7.jpg') center / cover;
+    height: 120vh;
 }
 
 .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  background-color: var(--dark-color);
-  border-bottom: 1px solid rgb(76, 76, 76);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: var(--dark-color);
+    border-bottom: 1px solid rgb(76, 76, 76);
 }
 
 .logo, .jf {
-  font-family: logo;
-  font-size: 45px;
-  font-weight: 900;
-  cursor: pointer;
-  color: var(--primary-color);
+    font-family: logo;
+    font-size: 45px;
+    font-weight: 900;
+    cursor: pointer;
+    color: var(--primary-color);
 }
 
 .jf {
-  color: var(--light-color);
+    color: var(--light-color);
 }
 
 nav {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .navs {
-  text-decoration: none;
-  color: inherit;
-  padding: 20px;
-  margin: 0 10px;
-  transition: .2s;
-  font-size: 20px;
-  text-align: center;
-  position: relative;
+    text-decoration: none;
+    color: inherit;
+    padding: 20px;
+    margin: 0 10px;
+    transition: .2s;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
 }
 
 .navs::after {
-  content: '';
-  width: 0%;
-  height: 3px;                           
-  background: var(--primary-color);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: .3s;
+    content: '';
+    width: 0%;
+    height: 3px;                           
+    background: var(--primary-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .3s;
 }
 
 .navs:hover {
-  color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .navs:hover::after {
-  width: 100%;
+    width: 100%;
 }
 
 .navs:active {
-  opacity: .7;
+    opacity: .7;
 }
 
 .hamburger {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
 }
 
 .hamburger .bar, 
 .hamburger::after, 
 .hamburger::before {
-  height: 4px;
-  width: 90%;
-  border-radius: 100px;
-  margin: 7px 0;
-  content: '';
-  display: block;
-  background-color: var(--light-color);
-  transition: .4s;
+    height: 4px;
+    width: 90%;
+    border-radius: 100px;
+    margin: 7px 0;
+    content: '';
+    display: block;
+    background-color: var(--light-color);
+    transition: .4s;
 }
 
 .hamburger:hover .bar, 
 .hamburger:hover::before, 
 .hamburger:hover::after{
-  background-color: var(--primary-color);
+    background-color: var(--primary-color);
 }
 
 .hamburger.active-ham::before {
-  transform: rotate(-45deg) translate(-10px, 5px);
+    transform: rotate(-45deg) translate(-10px, 5px);
 }
 
 .hamburger.active-ham::after {
-  transform: rotate(45deg) translate(-10px, -5px);
+    transform: rotate(45deg) translate(-10px, -5px);
 }
 
 .hamburger.active-ham .bar {
-  opacity: 0;
+    opacity: 0;
 }
 
 .profile-container {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 10%;
-  align-items: center;
-  height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+    align-items: center;
+    height: 100%;
 }
 
 .description-container {
-  line-height: 80PX;
-  font-size: 50px;
-  font-weight: bold;
-  width: 59%;
-  background-color: rgba(0, 0, 0, .7);
-  padding: 40px 50px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: .5s;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
+    line-height: 80PX;
+    font-size: 50px;
+    font-weight: bold;
+    width: 59%;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 40px 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 .description-container span {
-  color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .description-container:hover {
-  transform: scale(1.05);
+    transform: scale(1.05); 
 }
 
 .pic {
-  border-radius: 100%;
-  width: 30%;
-  transition: .5s;
-  cursor: pointer;
+    border-radius: 100%;
+    width: 30%;
+    transition: .5s;
+    cursor: pointer;
 }
 
 .pic:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 section {
-  width: 100%;
-  height: 120vh;
-  display: flex;
-  justify-content: center;
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
 }

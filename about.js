@@ -49,18 +49,46 @@ const hobbiesData = [
 let hobbies = `<div class="hobbies">`;
 // hobbies children element
 hobbiesData.forEach( hobby => {
-    hobbies += `<div class="hobbies-list">${hobby}</div>`;
+    hobbies += `
+        <div class="hobbies-list-container">
+            <div class="hobbies-list">${hobby}</div>
+        </div>
+    `;
 });
 // hobbies closing tag
 hobbies += `</div>`;
 
 const skillsData = [
-    { name: "HTML", value: 75, color: "rgb(255, 111, 0)" },
-    { name: "CSS", value: 66, color: "rgb(0, 145, 255)" },
-    { name: "JavaScript", value: 50, color: "yellow" },
-    { name: "PHP", value: 54, color: "rgb(116, 116, 201)" },
-    { name: "MYSQL", value: 59, color: "rgb(112, 195, 107)" },
-    { name: "PHOTOSHOP", value: 40, color: "rgb(70, 58, 242)" },
+    { 
+        name: "HTML", 
+        value: 75, 
+        color: "rgb(255, 111, 0)" 
+    },
+    { 
+        name: "CSS", 
+        value: 66, 
+        color: "rgb(0, 145, 255)" 
+    },
+    { 
+        name: "JavaScript", 
+        value: 50, 
+        color: "yellow" 
+    },
+    { 
+        name: "PHP", 
+        value: 54, 
+        color: "rgb(116, 116, 201)" 
+    },
+    { 
+        name: "MYSQL", 
+        value: 59, 
+        color: "rgb(112, 195, 107)" 
+    },
+    { 
+        name: "PHOTOSHOP", 
+        value: 40, 
+        color: "rgb(70, 58, 242)" 
+    },
 ];
 
 // ---------------opening tag of skill 
@@ -72,12 +100,12 @@ skills += `
     <div class="percent" style="--value:${skill.value};--color: ${skill.color}">
         <div class="dot"></div>
         <svg>
-        <circle cx="100" cy="100" r="100"></circle>
-        <circle cx="100" cy="100" r="100"></circle>
+            <circle cx="100" cy="100" r="100"></circle>
+            <circle cx="100" cy="100" r="100"></circle>
         </svg>
         <div class="number">
-        <h1 >${skill.value} <span>%</span> </h1>
-        <p>${skill.name}</p>
+            <h1 >${skill.value} <span>%</span> </h1>
+            <p>${skill.name}</p>
         </div>
     </div>
     </div>

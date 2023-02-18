@@ -97,14 +97,20 @@ ul {
 .hobbies {
     height: 80%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
     align-items: center;
     padding: 50px;
 }
 
+.hobbies-list-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 70%;
+}
+
 .hobbies-list {
     background-color: var(--dark-lighter-color);
-    height: 70%;
     width: 90%;
     display: flex;
     align-items: center;

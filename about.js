@@ -19,6 +19,9 @@ After my first year of college, I transferred back home to San Vicente, Palawan,
 <br>
 <br>
 In my third year of college, I became interested in coding again. Our adviser introduced me to the programming language Kotlin, which is similar to Java but simpler. At first, I was excited to learn mobile development, but I soon discovered that it would be challenging to find a job in that field in the Philippines. Then I learned about web development, which is a path that many programmers start with and has numerous job openings. I had previously tried HTML and CSS during my first year, but I didn't understand them then. Now, I find web development fascinating and hope to pursue it further.
+<br>
+<br>
+In conclusion, my journey through life and education has been filled with various experiences that have shaped who I am today. Although I faced some challenges in high school and college, such as feeling alone and struggling to find my true calling, I have discovered my passion for coding through my college experience. As I continue to explore different paths in the coding world, I am excited to see where my newfound passion takes me in the future. Through sharing my story, I hope to inspire others to never stop learning and growing, and to never give up on finding their true calling in life.
 
 </div>`;
 

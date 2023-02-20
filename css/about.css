@@ -34,7 +34,6 @@ ul {
 }
 
 .about-nav, .active {
-    font-weight: bold;
     margin: 0 40px;
     list-style-type: none;
     float: left;
@@ -79,7 +78,6 @@ ul {
 .autobiography {
     background-color: #222;
     line-height: 40px;
-    font-family: cavier;
     height: 70%;
     overflow-y: scroll;
     width: 80%;
